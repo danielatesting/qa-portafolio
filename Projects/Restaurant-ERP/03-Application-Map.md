@@ -1,31 +1,33 @@
-# Application Map
-
-## Project
-
-Restaurant ERP
-
-## Purpose
-
-This document identifies the application's modules, their business purpose, and the current testing status. It is used to guide exploratory testing and future test case creation.
-
----
-
 # 1. Dashboard
 
 ## Business Purpose
 
-Provides an operational overview of the restaurant and quick access to frequently used actions.
+The Dashboard provides administrators with a real-time overview of restaurant operations, content status, marketing activity, and system health. It also offers quick access to frequently used actions.
 
-## Features
+---
+
+## Components
 
 ### Overview Cards
+
+Displays high-level business metrics.
+
+Features:
+
 - Today's Reservations
 - Pending Reservations
 - Upcoming Events
 - Draft Blog Posts
 - Newsletter Subscribers
 
+---
+
 ### Quick Actions
+
+Provides shortcuts to common administrative tasks.
+
+Features:
+
 - Open Host Stand
 - Open Reservations
 - Create Blog Post
@@ -34,25 +36,114 @@ Provides an operational overview of the restaurant and quick access to frequentl
 - Manage Newsletter
 - Open Translation Coverage
 
+---
+
 ### Operations Overview
+
+Displays operational information related to restaurant activity.
+
+Widgets:
+
 - Reservations Snapshot
+  - Pending Reservations
+  - Confirmed Reservations
+  - Seated Guests
+  - Walk-ins
+  - Next Reservation
+
 - Waiting List
+  - Waiting
+  - Confirmed
+  - Notified
+  - Expired
+  - Recent Waiting List Entries
+
 - Floor Status
+  - Total Tables
+  - Available Tables
+  - Reserved Tables
+  - Occupied Tables
+  - Held Tables
+
+---
 
 ### Content Overview
+
+Displays published restaurant content.
+
+Widgets:
+
 - Events
-- Blog
+- Blog Posts
 - Menus
 
-### Other
+---
+
+### Marketing Health
+
+Displays marketing-related statistics.
+
+Widgets:
+
+Newsletter
+
+- Active Subscribers
+- Unverified Subscribers
+- Unsubscribed Users
+- Recent Signups
+
+Guests
+
+- Blocked Guests
+- Repeat Guests
+- Guest List
+
+---
+
+### System Health
+
+Displays translation coverage and localization status.
+
+Widgets:
+
+- Translation Health
+- Language Coverage
+- Lowest Coverage Domains
+- Zero Coverage Languages
+
+---
+
+### Attention Needed
+
+Displays administrative notifications requiring action.
+
+Examples:
+
+- Draft blog posts waiting for publication.
+
+---
+
+### Navigation & Controls
+
+General dashboard controls.
+
+Components:
+
+- Left Navigation Menu
 - Date Selector
 - Refresh Button
+- Language Selector
+- User Profile
+
+---
 
 ## Business Importance
 
 ⭐⭐⭐⭐⭐ Critical
 
-The dashboard provides visibility into restaurant operations and shortcuts to key workflows.
+The Dashboard serves as the application's operational control center, providing administrators with visibility into reservations, restaurant activity, content management, marketing, localization, and system status.
+
+---
 
 ## Current Testing Status
 
@@ -60,143 +151,9 @@ The dashboard provides visibility into restaurant operations and shortcuts to ke
 
 ---
 
-# 2. Inbox
+## Notes
 
-## Business Purpose
-
-Central location for notifications and messages.
-
-## Features
-
-(To be explored)
-
-## Business Importance
-
-⭐⭐⭐ Medium
-
-## Current Testing Status
-
-⚪ Not Started
-
----
-
-# 3. Front of House
-
-## Business Purpose
-
-Supports day-to-day restaurant operations.
-
-## Possible Features
-
-- Reservations
-- Host Stand
-- Waiting List
-- Tables
-- Seating
-
-(To be confirmed)
-
-## Business Importance
-
-⭐⭐⭐⭐⭐ Critical
-
-## Current Testing Status
-
-⚪ Not Started
-
----
-
-# 4. Content
-
-## Business Purpose
-
-Manages restaurant content.
-
-## Possible Features
-
-- Menus
-- Blog Posts
-- Events
-- Pages
-
-(To be confirmed)
-
-## Business Importance
-
-⭐⭐⭐ Medium
-
-## Current Testing Status
-
-⚪ Not Started
-
----
-
-# 5. Marketing
-
-## Business Purpose
-
-Customer communication and marketing.
-
-## Possible Features
-
-- Newsletter
-- Campaigns
-- Subscribers
-
-(To be confirmed)
-
-## Business Importance
-
-⭐⭐⭐ Medium
-
-## Current Testing Status
-
-⚪ Not Started
-
----
-
-# 6. Workforce
-
-## Business Purpose
-
-Employee management.
-
-## Possible Features
-
-- Staff
-- Roles
-- Scheduling
-
-(To be confirmed)
-
-## Business Importance
-
-⭐⭐⭐⭐ High
-
-## Current Testing Status
-
-⚪ Not Started
-
----
-
-# 7. System
-
-## Business Purpose
-
-System configuration and administration.
-
-## Possible Features
-
-- Settings
-- Permissions
-- Configuration
-
-(To be confirmed)
-
-## Business Importance
-
-⭐⭐⭐⭐⭐ Critical
-
-## Current Testing Status
-
-⚪ Not Started
+- Dashboard is composed of multiple independent widgets.
+- Most widgets display real-time operational data.
+- Dashboard contains shortcuts to frequently used workflows.
+- Additional functionality may be discovered during further exploration.
